@@ -15,9 +15,7 @@ This is a Django REST-API for finding movies online on around 9 platforms (will 
 You need to install Django and Django Rest Framework and selenium (for scraping Hotstar). Just run the commands
 
 ```
-pip install Django==3.0.2
-pip install djangorestframework==3.11.0
-pip install selenium==3.141.0
+pip install -r requirements.txt
 ```
 
 and you are good to go.
