@@ -17,6 +17,7 @@ You need to install Django and Django Rest Framework and selenium (for scraping 
 ```
 pip install Django==3.0.2
 pip install djangorestframework==3.11.0
+pip install bs4==0.0.1
 pip install selenium==3.141.0
 ```
 
