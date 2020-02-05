@@ -1,4 +1,4 @@
-import requests, json, time
+import requests, time
 
 name = input("Enter name: ")
 type = None
@@ -6,8 +6,7 @@ type = None
 url = f'http://localhost:8000/api/data/?name={name}&type={type}'
 curr = time.time()
 response = requests.get(url)
-result = response.text
-result = json.loads(result)
+result = response.json()
 hotstar_movies, hotstar_series = [], []
 airtel_movies, airtel_series = [], []
 eros_movies, eros_series = [], []
