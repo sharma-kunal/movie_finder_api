@@ -27,7 +27,7 @@ def voda_search(name, type=None):
     global movie, tv_show
     if type == "movie":
         return movie
-    elif type == "tv_show":
+    elif type == "show":
         return tv_show
     else:
         if movie and tv_show:

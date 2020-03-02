@@ -33,7 +33,7 @@ def jio_search(name, type=None):
                 pass
             if type == "movie" and movie_data:
                 movies = find_movie(movie_data)
-            elif type == "tv_show" and series_data:
+            elif type == "show" and series_data:
                 tv_series = find_series(series_data)
             else:
                 movies = find_movie(movie_data)

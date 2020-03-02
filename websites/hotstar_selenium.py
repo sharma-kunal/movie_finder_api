@@ -22,7 +22,7 @@ def hotstar_search(name, browser, typ=None):
         return find_movie(browser)
 
     # TV Show
-    elif typ == "tv_show":
+    elif typ == "show":
         return find_show(browser)
 
     # typ = None

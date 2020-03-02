@@ -25,7 +25,7 @@ def airtel_search(name, type=None):
                     series_data = d['contentResponseList']
             if type == "movie":
                 return find_movie(movie_data)
-            elif type == "tv_show":
+            elif type == "show":
                 return find_show(series_data)
             else:
                 movies = find_movie(movie_data)

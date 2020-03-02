@@ -1,7 +1,29 @@
 import requests, json, time
+from tmdbv3api import TMDb, Movie
 
+tmdb = TMDb()
+tmdb.api_key = '23c165f8646296357339d554817512e7'
+
+type = input("What do you want to search for? Movie or Show: (m/s) (leave blank for None): ")
+if type.lower() == "m":
+    type = "movie"
+elif type.lower() == "s":
+    type = "show"
+else:
+    type = None
 name = input("Enter name: ")
-type = None
+movie = Movie()
+search = movie.search(name)
+
+di = {}
+for i, res in enumerate(search):
+    di[i+1] = res
+    print(f"{i+1}\t{res}")
+num = input("\nSelect the movie number: ")
+try:
+    name = di[int(num)]
+except KeyError:
+    raise Exception("Please select valid number from above.")
 
 url = f'http://localhost:8000/api/data/?name={name}&type={type}'
 curr = time.time()

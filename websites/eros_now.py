@@ -26,7 +26,7 @@ def eros_search(name, type=None):
             originals = data['originals']['rows']
         if type == "movie":
             return find_movie(movies_data)
-        elif type == "tv_show":
+        elif type == "show":
             return find_series(series_data)
         else:
             movies = find_movie(movies_data)

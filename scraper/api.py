@@ -17,25 +17,25 @@ from selenium.webdriver.chrome.options import Options
 
 
 class DataList(APIView):
-    def get(self):
+    def get(self, response):
         movie_name = self.request.query_params.get('name', None)
         # flag = self.request.query_params.get('flag', None)
-        type = self.request.query_params.get('type', None)
+        type_ = self.request.query_params.get('type', None)
         if movie_name:
             options = Options()
             options.add_argument("--headless")
             browser = webdriver.Chrome(chrome_options=options)
             # print(movie_name)
             data = []
-            hotstar = hotstar_search(movie_name, browser, type)
-            airtel = airtel_search(movie_name, type)
-            eros_now = eros_search(movie_name, type)
-            jio = jio_search(movie_name, type)
+            hotstar = hotstar_search(movie_name, browser, type_)
+            airtel = airtel_search(movie_name, type_)
+            eros_now = eros_search(movie_name, type_)
+            jio = jio_search(movie_name, type_)
             idea = idea_search(movie_name, browser)
-            vodafone = voda_search(movie_name, type)
-            zee5 = zee5_search(movie_name, type)
-            mx_player = mx_player_search(movie_name, type)
-            alt_balaji = alt_balaji_search(movie_name, type)
+            vodafone = voda_search(movie_name, type_)
+            zee5 = zee5_search(movie_name, type_)
+            mx_player = mx_player_search(movie_name, type_)
+            alt_balaji = alt_balaji_search(movie_name, type_)
             if hotstar:
                 data = [Data(name=mn, provider="hotstar", link=link, movie=typ) for mn, link, typ in hotstar]
             if airtel:

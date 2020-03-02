@@ -25,7 +25,7 @@ def mx_player_search(name, type=None):
                 return None
         except KeyError:
             return None
-    elif type == "series":
+    elif type == "show":
         while counter < 3:
             try:
                 response = requests.get(endpoint.format(name, name, "shows", "shows"))

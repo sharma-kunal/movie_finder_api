@@ -50,7 +50,7 @@ def find_movie_and_show(data, type):
                 counter += 1
     if type == "movie":
         return movies or None
-    elif type == "series":
+    elif type == "show":
         return shows or None
     else:
         if movies and shows:

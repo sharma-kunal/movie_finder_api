@@ -41,7 +41,7 @@ def zee5_search(name, type=None):
         movie, show = [], []
         if type == "movie":
             movie = find_movie(data)
-        elif type == "tv_show":
+        elif type == "show":
             show = find_show(data)
         else:
             movie = find_movie(data)
