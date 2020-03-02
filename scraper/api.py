@@ -17,11 +17,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 class DataList(APIView):
-<<<<<<< HEAD
     def get(self, response):
-=======
-    def get(self, request):
->>>>>>> 1752aec8129ff9d787b05960cab4b0227ea6361f
         movie_name = self.request.query_params.get('name', None)
         # flag = self.request.query_params.get('flag', None)
         type_ = self.request.query_params.get('type', None)
