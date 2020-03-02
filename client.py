@@ -1,8 +1,9 @@
 import requests, json, time
 from tmdbv3api import TMDb, Movie
+import requests, time
 
 tmdb = TMDb()
-tmdb.api_key = '23c165f8646296357339d554817512e7'
+tmdb.api_key = '<YOUR-API-KEY>'
 
 type = input("What do you want to search for? Movie or Show: (m/s) (leave blank for None): ")
 if type.lower() == "m":
@@ -28,8 +29,7 @@ except KeyError:
 url = f'http://localhost:8000/api/data/?name={name}&type={type}'
 curr = time.time()
 response = requests.get(url)
-result = response.text
-result = json.loads(result)
+result = response.json()
 hotstar_movies, hotstar_series = [], []
 airtel_movies, airtel_series = [], []
 eros_movies, eros_series = [], []
