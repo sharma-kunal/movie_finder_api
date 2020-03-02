@@ -38,6 +38,12 @@ Please make sure that you are in the directory where manage.py is present
 2. Now just for testing purposes I have provided a file `client.py`. You can run this file to check the result fetched by API.
 You can run the file and type any movie name you want to search and it will search on all platforms for the given movie and provide you all the results fetched
 
+---
+**NOTE**
+
+To run the `client.py` file you need to get the API Key from TMDB website. 
+All steps have been clearly explained at [TMDB API Key](https://developers.themoviedb.org/3/getting-started/introduction)
+
 ## Further Improvements
 
 Currently the project is in development phase as there are many improvements that need to be done and many more functionalities that need to be added to the project. Some are
