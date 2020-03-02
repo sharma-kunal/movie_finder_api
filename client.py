@@ -20,6 +20,8 @@ di = {}
 for i, res in enumerate(search):
     di[i+1] = res
     print(f"{i+1}\t{res}")
+if len(di.keys()) == 0:
+    raise Exception("No movies found..")
 num = input("\nSelect the movie number: ")
 try:
     name = di[int(num)]
