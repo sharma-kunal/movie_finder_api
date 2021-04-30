@@ -12,4 +12,4 @@ selenium==3.141.0
 soupsieve==1.9.5
 sqlparse==0.3.0
 tmdbv3api==1.5.1
-urllib3==1.25.7
+urllib3==1.25.8
